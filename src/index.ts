@@ -1,2 +1,2 @@
-import "main.css"
+import "./tw-esystyle.css"
 export * from './components';

@@ -1,14 +1,8 @@
 import React, { FC } from 'react';
-import '../../main.css';
+import '../../tw-esystyle.css';
 import { ButtonProps } from './Button.types';
 
-const Button: FC<ButtonProps> = ({
-        variant,
-        onClick,
-        buttonFunction,
-        children,
-        disabled
-    }) => {
+const Button: FC<ButtonProps> = ({}) => {
     return (
         <button className={"bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"}>
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
