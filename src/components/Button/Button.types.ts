@@ -1,7 +1,7 @@
-import { MouseEventHandler} from "react";
-
 export interface ButtonProps {
-    type: 'primary' | 'secondary' | 'error';
-    text: string;
-    onClick: MouseEventHandler<HTMLButtonElement>
+    variant: 'primary' | 'secondary';
+    buttonFunction: 'default' | 'submit' | 'delete' | 'close' | 'edit' | 'login';
+    children: string;
+    disabled: boolean;
+    onClick: () => void;
 }

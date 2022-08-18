@@ -10,8 +10,14 @@ export default {
 
 const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 
+function showMessageBox() {
+    alert("Clicked!")
+}
+
 export const Primary = Template.bind({});
 Primary.args = {
-    text: "Hello World",
-    type: 'primary'
+    children: "Hello World",
+    variant: 'primary',
+    onClick: () => {showMessageBox()}
 }
+
