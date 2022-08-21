@@ -10,14 +10,16 @@ export default {
 
 const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 
-function showMessageBox() {
-    alert("Clicked!")
-}
-
 export const Primary = Template.bind({});
 Primary.args = {
-    children: "Hello World",
-    variant: 'primary',
-    onClick: () => {showMessageBox()}
+    variant: 'submit',
+    disabled: false
+}
+
+export const OnClick = Template.bind({});
+OnClick.args = {
+    variant: 'submit',
+    disabled: false,
+    onClick: () => {alert("Clicked!")}
 }
 

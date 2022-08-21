@@ -1,7 +1,6 @@
 export interface ButtonProps {
-    variant: 'primary' | 'secondary';
-    buttonFunction: 'default' | 'submit' | 'delete' | 'close' | 'edit' | 'login';
-    children: string;
+    variant: 'submit' | 'cancel' |'delete' | 'import' | 'export' | 'synchro';
     disabled: boolean;
     onClick: () => void;
+    isIconVisible: boolean;
 }
