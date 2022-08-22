@@ -4,7 +4,7 @@ import {ComponentStory, ComponentMeta} from "@storybook/react";
 import Button  from "./Button";
 
 export default {
-    title: 'ESYSTYLE/COMPONENTS',
+    title: 'ESYSTYLE/COMPONENTS/Button',
     component: Button,
 } as ComponentMeta<typeof Button>;
 
@@ -21,5 +21,11 @@ OnClick.args = {
     variant: 'submit',
     disabled: false,
     onClick: () => {alert("Clicked!")}
+}
+
+export const Disabled = Template.bind({});
+Disabled.args = {
+    variant: 'delete',
+    disabled: true
 }
 
