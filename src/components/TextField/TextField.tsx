@@ -5,7 +5,8 @@ import {TextFieldProps} from "./TextField.types";
 export const TextField: FC<TextFieldProps> = ({
         type,
         size ,
-        readonly
+        readonly,
+        placeholder,
     }) => {
 
     let textFieldSize, readOnlyCss;
@@ -21,7 +22,12 @@ export const TextField: FC<TextFieldProps> = ({
     }
 
     return (
-        <input type={type} readOnly={readonly} className={`${textFieldSize} ${readOnlyCss} border border-gray-300 rounded-md text-sm px-1.5 py-1.5 bg-gray-100 dark:bg-white `}/>
+        <input
+            placeholder={placeholder}
+            type={type}
+            readOnly={readonly}
+            className={`${textFieldSize} ${readOnlyCss} border border-gray-300 rounded-md text-sm px-1.5 py-1.5 bg-gray-100 dark:bg-white `}
+        />
     )
 }
 

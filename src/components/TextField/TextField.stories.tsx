@@ -4,21 +4,40 @@ import {TextField} from "./TextField";
 
 export default {
     title: 'ESYSTYLE/COMPONENTS/TextField',
-    component: TextField
+    component: TextField,
+    parameters: {
+        docs: {
+            description: {
+                component: 'Use this TextField!'
+            }
+        }
+    }
 } as ComponentMeta<typeof TextField>;
 
 const Template: ComponentStory<typeof TextField> = (args) => <TextField {...args} />
 
 export const Textfield = Template.bind({});
+Textfield.storyName = 'Default';
 Textfield.args = {
     type: 'text',
     size: 'default',
-    readonly: false
+    readonly: false,
+    placeholder: 'Some text for Placeholder'
 }
 
-export const TextfieldReadOnly = Template.bind({});
-TextfieldReadOnly.args = {
+export const ReadOnly = Template.bind({});
+ReadOnly.storyName = 'Read Only';
+ReadOnly.args = {
     type: 'text',
     size: 'default',
-    readonly: true
+    readonly: true,
+    placeholder: 'This is Read Only!'
+}
+
+export const FullWidth = Template.bind({});
+FullWidth.storyName = 'Full Width';
+FullWidth.args = {
+    type: 'text',
+    size: 'full-width',
+    placeholder: 'Some text for Placeholder'
 }
