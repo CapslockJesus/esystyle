@@ -29,3 +29,10 @@ Disabled.args = {
     disabled: true
 }
 
+export const WithIcon = Template.bind({});
+WithIcon.args = {
+    variant: 'cancel',
+    disabled: false,
+    isIconVisible: true,
+}
+
