@@ -1,0 +1,7 @@
+.sm-menue {
+    display: none;
+}
+
+.subMenu:hover > .sm-menue {
+    display: block !important;
+}
