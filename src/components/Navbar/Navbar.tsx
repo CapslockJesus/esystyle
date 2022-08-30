@@ -16,7 +16,7 @@ export const Navbar: FC<NavbarMainMenuProps> = ({
     return (
         <>
             <nav className={"bg-neutral-900 px-2 p-4 shadow-none"}>
-                <div className={"flex flex-wrap justify-between items-center mx-auto max-w-screen-2xl"}>
+                <div className={"flex flex-wrap justify-between items-center mx-auto max-w-screen-xl"}>
                     <div>
                         <img src={logo} className={"h-10"} alt={"esyfy logo"}/>
                         {softwareName ? (
@@ -59,7 +59,7 @@ export const Navbar: FC<NavbarMainMenuProps> = ({
             {user ? (
                 navbarSubMenuProps ? (
                         <div className={"bg-white px-1 p-2 shadow"}>
-                            <div className={"flex flex-wrap justify-between items-center mx-auto max-w-screen-2xl"}>
+                            <div className={"flex flex-wrap justify-between items-center mx-auto max-w-screen-xl"}>
                                 <ul className={"items-center flex flex-col mt-4 font-medium md:flex-row md:space-x-8 md:mt-0"}>
                                     {navbarSubMenuProps.map(submenu => (
                                         <li>

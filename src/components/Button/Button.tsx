@@ -11,9 +11,9 @@ export const Button: FC<ButtonProps> = (
 
     }) => {
 
-    const style = `inline-flex items-center px-6 py-2.5 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out`;
+    const style = `ml-1 mr-1 inline-flex items-center px-6 py-2.5 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out`;
     const submitStyle = `bg-green-600 hover:bg-green-700 focus:bg-green-700 active:bg-green-800`;
-    const cancelStyle = `bg-emerald-600 hover:bg-emerald-700 focus:bg-emerald-700 active:bg-emerald-800`;
+    const cancelStyle = `bg-gray-600 hover:bg-gray-700 focus:bg-gray-700 active:bg-gray-800`;
     const deleteStyle = `bg-red-600 hover:bg-red-700 focus:bg-red-700 active:bg-red-800`;
     const importStyle = `bg-orange-600 hover:bg-orange-700 focus:bg-orange-700 active:bg-orange-800`;
     const exportStyle = `bg-yellow-600 hover:bg-yellow-700 focus:bg-yellow-700 active:bg-yellow-800`;
