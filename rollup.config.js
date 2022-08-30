@@ -5,6 +5,7 @@ import { terser } from 'rollup-plugin-terser';
 import external from 'rollup-plugin-peer-deps-external';
 import postcss from 'rollup-plugin-postcss';
 import dts from 'rollup-plugin-dts';
+import copy from "rollup-plugin-copy-assets";
 
 const packageJson = require('./package.json');
 
@@ -31,6 +32,11 @@ export default [
       typescript({ tsconfig: './tsconfig.json' }),
       postcss({
         extract: 'tw-esystyle.css',
+      }),
+      copy({
+        assets: [
+          "src/components/assets",
+        ],
       }),
       terser()
     ],

@@ -1,6 +1,6 @@
 {
   "name": "@capslockjesus/esystyle",
-  "version": "0.0.9",
+  "version": "0.1.1",
   "description": "",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -42,6 +42,7 @@
   },
   "dependencies": {
     "@storybook/theming": "^6.5.10",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "rollup-plugin-copy-assets": "^2.0.3"
   }
 }
