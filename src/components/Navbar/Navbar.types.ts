@@ -2,7 +2,14 @@ export interface NavbarMainMenuProps {
     softwareName: string,
     mainMenuProps: MainMenuProps[],
     navbarSubMenuProps: NavbarSubMenuProps[]
-    user: UserProps
+    user?: UserProps,
+    logoProps: LogoProps
+}
+
+interface LogoProps {
+    logo: string,
+    altLogo: string,
+    linkTo?: string
 }
 
 interface MainMenuProps {
@@ -22,7 +29,7 @@ interface NavbarSubMenuProps {
     name: string,
     srcIcon: string,
     altText: string,
-    navbarSubMenuDropDownProps: NavBarSubMenuDropdownProps[]
+    navbarSubMenuDropDownProps?: NavBarSubMenuDropdownProps[]
 }
 
 interface NavBarSubMenuDropdownProps {

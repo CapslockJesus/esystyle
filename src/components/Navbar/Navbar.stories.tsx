@@ -25,6 +25,7 @@ const Template: ComponentStory<typeof Component> = (args) => <Component {...args
 export const LoggedOut = Template.bind({});
 LoggedOut.storyName = "Logged Out";
 LoggedOut.args = {
+    logoProps: {logo: logo, altLogo: 'esyfy logo', linkTo: ""},
     softwareName: "esycalc",
     mainMenuProps: [
         {linkTo: "#", name: "Dokumentation"},
@@ -35,6 +36,7 @@ LoggedOut.args = {
 export const LoggedIn = Template.bind({});
 LoggedIn.storyName = "Logged In";
 LoggedIn.args = {
+    logoProps: {logo: logo, altLogo: 'esyfy logo', linkTo: ""},
     softwareName: "esycalc",
     user: {name: "Mustermann", prename: "Max"},
     mainMenuProps: [
@@ -46,6 +48,7 @@ LoggedIn.args = {
 export const LoggedInWithSubmenu = Template.bind({});
 LoggedInWithSubmenu.storyName = "Logged In with Submenu";
 LoggedInWithSubmenu.args = {
+    logoProps: {logo: logo, altLogo: 'esyfy logo', linkTo: ""},
     softwareName: "esycalc",
     user: {name: "Mustermann", prename: "Max"},
     mainMenuProps: [
@@ -54,7 +57,7 @@ LoggedInWithSubmenu.args = {
     ],
     navbarSubMenuProps: [
         {
-            id: "abc", linkTo: "#", name: "Startseite", srcIcon: img1, altText:"home icon", navbarSubMenuDropDownProps: []
+            id: "abc", linkTo: "#", name: "Startseite", srcIcon: img1, altText:"home icon"
         },
         {
             id: "reprice", linkTo: "#", name: "Reprice", srcIcon: img2, altText:"reprice icon",

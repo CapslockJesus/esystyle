@@ -1,6 +1,6 @@
 import React, {FC} from "react";
 import '../../tw-esystyle.css';
-import './Navbar.css'
+import './Navbar.css';
 
 import {NavbarMainMenuProps} from "./Navbar.types";
 
@@ -8,23 +8,24 @@ export const Navbar: FC<NavbarMainMenuProps> = ({
     mainMenuProps,
     navbarSubMenuProps,
     user,
-    softwareName
+    softwareName,
+    logoProps
                    }) => {
-
-    const logo = require("./../assets/esyfy_logo_white.png");
 
     return (
         <>
             <nav className={"bg-neutral-900 px-2 p-4 shadow-none"}>
                 <div className={"flex flex-wrap justify-between items-center mx-auto max-w-screen-xl"}>
                     <div>
-                        <img src={logo} className={"h-10"} alt={"esyfy logo"}/>
+                        <a href={logoProps.linkTo}>
+                        <img src={logoProps.logo} className={"h-10"} alt={logoProps.altLogo}/>
                         {softwareName ? (
                             <span className={"text-white"}>{softwareName}</span>
                         ) : (
                             <>
                             </>
                         )}
+                        </a>
                     </div>
                     <div className={"flex items-center"}>
                         <div className={"flex items-center w-full"}>
@@ -70,7 +71,7 @@ export const Navbar: FC<NavbarMainMenuProps> = ({
                                                 </div>
                                                 <div className={"sm-menue absolute"}>
                                                     <ul className={"mt-2 bg-yellow-50"}>
-                                                        {submenu.navbarSubMenuDropDownProps.map(dropdown => (
+                                                        {submenu.navbarSubMenuDropDownProps?.map(dropdown => (
                                                             <a href={dropdown.linkTo}>
                                                                 <li className={"hover:bg-yellow-400 border-b border-yellow-300 px-4 py-2"}>
                                                                     {dropdown.name}
