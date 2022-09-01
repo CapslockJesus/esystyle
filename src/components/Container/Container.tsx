@@ -9,10 +9,10 @@ export const Container: FC<ComponentInterface> = ({children, width}) => {
 
     switch (width) {
         case "navbar-width":
-            widthCSS = "flex flex-wrap justify-between items-center mx-auto max-w-screen-xl";
+            widthCSS = "mt-4 mb-4 justify-between items-center mx-auto max-w-screen-xl";
             break;
         case "full-width":
-            widthCSS = "flex flex-wrap justify-between items-center mx-auto max-w-screen-2xl";
+            widthCSS = "mt-4 mb-4 justify-between items-center mx-auto max-w-screen-2xl";
             break;
     }
 

@@ -19,7 +19,7 @@ const Template: ComponentStory<typeof Component> = (args) => <Component {...args
 
 export const ContainerNavbarWidth = Template.bind({});
 ContainerNavbarWidth.args = {
-    children: 'Hier ein Text',
+    children: [<div>Text1</div>, <div>Text2</div>],
     width: "navbar-width"
 }
 
