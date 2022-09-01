@@ -18,6 +18,7 @@ export const Button: FC<ButtonProps> = (
     const importStyle = `bg-orange-600 hover:bg-orange-700 focus:bg-orange-700 active:bg-orange-800`;
     const exportStyle = `bg-yellow-600 hover:bg-yellow-700 focus:bg-yellow-700 active:bg-yellow-800`;
     const synchroStyle = `bg-cyan-600 hover:bg-cyan-700 focus:bg-cyan-700 active:bg-cyan-800`;
+    const createStyle = `bg-violet-600 hover:bg-violet-700 focus:bg-violet-700 active:bg-violet-800`;
     const disabledStyle = `pointer-events-none opacity-60`;
     let iconVisible = "";
 
@@ -35,7 +36,6 @@ export const Button: FC<ButtonProps> = (
                     <span>Speichern</span>
                 </button>
             )
-            break;
         case 'delete':
             return (
                 <button type={"button"} className={`${style} ${deleteStyle} ${disabled ? `${disabledStyle}` : ''}`} onClick={onClick}>
@@ -45,7 +45,6 @@ export const Button: FC<ButtonProps> = (
                     <span>Löschen</span>
                 </button>
             )
-            break;
         case 'cancel':
             return (
                 <button type={"button"} className={`${style} ${cancelStyle} ${disabled ? `${disabledStyle}` : ''}`} onClick={onClick}>
@@ -55,7 +54,6 @@ export const Button: FC<ButtonProps> = (
                     <span>Abbrechen</span>
                 </button>
             )
-            break;
         case 'import':
             return (
                 <button type={"button"} className={`${style} ${importStyle} ${disabled ? `${disabledStyle}` : ''}`} onClick={onClick}>
@@ -65,7 +63,6 @@ export const Button: FC<ButtonProps> = (
                     <span>Importieren</span>
                 </button>
             )
-            break;
         case 'export':
             return (
                 <button type={"button"} className={`${style} ${exportStyle} ${disabled ? `${disabledStyle}` : ''}`} onClick={onClick}>
@@ -75,7 +72,6 @@ export const Button: FC<ButtonProps> = (
                     <span>Exportieren</span>
                 </button>
             )
-            break;
         case 'synchro':
             return (
                 <button type={"button"} className={`${style} ${synchroStyle} ${disabled ? `${disabledStyle}` : ''}`} onClick={onClick}>
@@ -85,7 +81,16 @@ export const Button: FC<ButtonProps> = (
                     <span>Synchronisieren</span>
                 </button>
             )
-            break;
+        case 'create':
+            return (
+                <button type={"button"} className={`${style} ${createStyle} ${disabled ? `${disabledStyle}` : ''}`} onClick={onClick}>
+                    <svg xmlns="http://www.w3.org/2000/svg" className={`h-5 w-5 mr-2 ${iconVisible}`} fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15"/>
+                    </svg>
+
+                    <span>Hinzufügen</span>
+                </button>
+            )
     }
 }
 
