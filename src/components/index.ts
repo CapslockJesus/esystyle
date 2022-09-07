@@ -8,3 +8,5 @@ export { default as ModalHeader} from './ModalHeader';
 export { default as ModalBody } from './ModalBody';
 export { default as ModalFooter } from './ModalFooter';
 export { default as Container } from './Container';
+export { default as Card } from './Card';
+export { default as ComponentHeader } from './ComponentHeader';
