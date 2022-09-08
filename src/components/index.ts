@@ -10,3 +10,4 @@ export { default as ModalFooter } from './ModalFooter';
 export { default as Container } from './Container';
 export { default as Card } from './Card';
 export { default as ComponentHeader } from './ComponentHeader';
+export { default as Grid } from './Grid';
