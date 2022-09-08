@@ -3,17 +3,11 @@ import '../../tw-esystyle.css';
 
 import {CardInterface as ComponentInterface} from "./Card.types";
 
-export const Card: FC<ComponentInterface> = ({name, onClick, id}) => {
-
+export const Card: FC<ComponentInterface> = ({name, onClick, id, notes}) => {
     return (
-        <div
-            className={`flex w-full h-fit mb-2 pl-16 pr-16 pt-3 pb-3 bg-yellow-200 hover:bg-yellow-400 hover:cursor-pointer ease-in-out duration-100 ease-in hover:shadow hover:shadow-zinc-200 justify-center rounded-lg`}
-            id={id}
-            onClick={onClick}
-        >
-            <div className="text-lg font-bold tracking-tight align-center">
-                {name}
-            </div>
+        <div id={id} className="px-2 py-2 bg-white border border-gray-300 hover:bg-yellow-400 ease-in-out duration-200 hover:shadow-lg rounded-xl hover:cursor-pointer" onClick={onClick}>
+            <h3 className="text-xl font-bold text-center text-gray-800">{name}</h3>
+            <p className="text-center text-gray-500">{notes}</p>
         </div>
     )
 }

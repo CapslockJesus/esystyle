@@ -20,5 +20,6 @@ const Template: ComponentStory<typeof Component> = (args) => <Component {...args
 export const DefaultCard = Template.bind({});
 DefaultCard.args = {
     onClick: () => {alert("hallo")},
-    name: "DPD",
+    name: "Card #1",
+    notes: "This is a small info text inside the card"
 }
