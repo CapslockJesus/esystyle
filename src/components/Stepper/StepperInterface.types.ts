@@ -11,7 +11,7 @@ export interface StepperInterface {
 }
 
 interface Steps {
-    showLineNextStep?: 'hidden'
+    showLineNextStep: boolean
     tailwindIcon: JSX.Element
     linkTo: string
     stepName: string
