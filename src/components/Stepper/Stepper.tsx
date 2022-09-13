@@ -19,6 +19,7 @@ export const Stepper: FC<StepperInterface> = ({steps}) => {
                             </div>
                         </a>
                         <div className={`${step.showLineNextStep ? '' : 'hidden'} flex-auto border-t-2 transition duration-500 ease-in-out ${step.isFinishdStep ? 'border-yellow-300' : 'border-gray-300'}`}/>
+
                     </>
                 ))}
             </div>
