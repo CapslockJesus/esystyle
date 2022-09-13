@@ -23,6 +23,7 @@ export const Navbar: FC<NavbarMainMenuProps> = ({
                             <span className={"text-white"}>{softwareName}</span>
                         ) : (
                             <>
+                                Hier ein Test
                             </>
                         )}
                         </a>
