@@ -22,7 +22,8 @@ Textfield.args = {
     type: 'text',
     size: 'default',
     readonly: false,
-    placeholder: 'Some text for Placeholder'
+    placeholder: 'Some text for Placeholder',
+    value: "Text inside the TextField"
 }
 
 export const ReadOnly = Template.bind({});

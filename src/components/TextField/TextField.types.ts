@@ -15,4 +15,5 @@ export interface TextFieldProps {
      ** Set a placeholder for an textfield
      */
     placeholder?: string,
+    value?: string
 }
