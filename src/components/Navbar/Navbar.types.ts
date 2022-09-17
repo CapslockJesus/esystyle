@@ -9,7 +9,7 @@ export interface NavbarMainMenuProps {
 interface LogoProps {
     logo: string,
     altLogo: string,
-    linkTo?: string
+    linkTo: string
 }
 
 interface MainMenuProps {
