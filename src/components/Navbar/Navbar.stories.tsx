@@ -16,7 +16,10 @@ export default {
             description: {
                 component: 'Use this TextField!'
             }
-        }
+        },
+        actions: {
+            handles: ['mouseover', 'onClick'],
+        },
     }
 } as ComponentMeta<typeof Component>;
 
@@ -25,56 +28,55 @@ const Template: ComponentStory<typeof Component> = (args) => <Component {...args
 export const LoggedOut = Template.bind({});
 LoggedOut.storyName = "Logged Out";
 LoggedOut.args = {
-    logoProps: {logo: logo, altLogo: 'esyfy logo', linkTo: ""},
+    logoProps: {logo: logo, altLogo: 'esyfy logo', linkTo: () => {window.location.href = '#'}},
     softwareName: "esycalc",
     mainMenuProps: [
-        {linkTo: "#", name: "Dokumentation"},
-        {linkTo: "#", name: "Hilfe"}
+        {linkTo: () => {window.location.href = '#'}, name: "Dokumentation"},
+        {linkTo: () => {window.location.href = '#'}, name: "Hilfe"}
     ]
 }
 
 export const LoggedIn = Template.bind({});
 LoggedIn.storyName = "Logged In";
 LoggedIn.args = {
-    logoProps: {logo: logo, altLogo: 'esyfy logo', linkTo: ""},
+    logoProps: {logo: logo, altLogo: 'esyfy logo', linkTo: () => {window.location.href = '#'}},
     softwareName: "esycalc",
     user: {name: "Mustermann", prename: "Max"},
     mainMenuProps: [
-        {linkTo: "#", name: "Dokumentation"},
-        {linkTo: "#", name: "Hilfe"}
+        {linkTo: () => {window.location.href = '#'}, name: "Dokumentation"},
+        {linkTo: () => {window.location.href = '#'}, name: "Hilfe"}
     ]
 }
 
 export const LoggedInWithSubmenu = Template.bind({});
 LoggedInWithSubmenu.storyName = "Logged In with Submenu";
 LoggedInWithSubmenu.args = {
-    logoProps: {logo: logo, altLogo: 'esyfy logo', linkTo: ""},
+    logoProps: {logo: logo, altLogo: 'esyfy logo', linkTo: () => {window.location.href = '#'}},
     softwareName: "esycalc",
     user: {name: "Mustermann", prename: "Max"},
     mainMenuProps: [
-        {linkTo: "#", name: "Dokumentation"},
-        {linkTo: "#", name: "Hilfe"}
+        {linkTo: () => {window.location.href = '#'}, name: "Dokumentation"},
+        {linkTo: () => {window.location.href = '#'}, name: "Hilfe"}
     ],
     navbarSubMenuProps: [
         {
-            id: "abc", linkTo: "#", name: "Startseite", srcIcon: img1, altText:"home icon"
+            id: "abc", linkTo: () => {window.location.href = '#'}, name: "Startseite", srcIcon: img1, altText:"home icon"
         },
         {
-            id: "reprice", linkTo: "#", name: "Reprice", srcIcon: img2, altText:"reprice icon",
+            id: "reprice", linkTo: () => {window.location.href = '/'}, name: "Reprice", srcIcon: img2, altText:"reprice icon",
             navbarSubMenuDropDownProps: [
-                {linkTo: "#", name: "Reprice Menu #1"},
-                {linkTo: "#", name: "Reprice Menu #1"},
-                {linkTo: "#", name: "Reprice Menu #1"},
-                {linkTo: "#", name: "Reprice Menu #1"},
+                {linkTo: () => {window.location.href = '#'}, name: "Reprice Menu #1"},
+                {linkTo: () => {window.location.href = '#'}, name: "Reprice Menu #1"},
+                {linkTo: () => {window.location.href = '#'}, name: "Reprice Menu #1"},
+                {linkTo: () => {window.location.href = '#'}, name: "Reprice Menu #1"},
             ]
         },
         {
-            id: "synchro", linkTo: "#", name: "Synchronisieren", srcIcon: img3, altText:"sync icon",
+            id: "synchro", linkTo: () => {window.location.href = '#'}, name: "Synchronisieren", srcIcon: img3, altText:"sync icon",
             navbarSubMenuDropDownProps: [
-                {linkTo: "#", name: "Synchronisieren Menu #1"},
-                {linkTo: "#", name: "Synchronisieren Menu #1"},
-                {linkTo: "#", name: "Synchronisieren Menu #1"},
-                {linkTo: "#", name: "Synchronisieren Menu #1"},
+                {linkTo: () => {window.location.href = '#'}, name: "Komm Synchro mich Menu #1"},
+                {linkTo: () => {window.location.href = '#'}, name: "Synchronisieren Menu #2"},
+                {linkTo: () => {window.location.href = '#'}, name: "Synchronisieren Menu #3"},
             ]
         }
     ]
