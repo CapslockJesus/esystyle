@@ -9,11 +9,11 @@ export interface NavbarMainMenuProps {
 interface LogoProps {
     logo: string,
     altLogo: string,
-    linkTo: string
+    linkTo: () => void
 }
 
 interface MainMenuProps {
-    linkTo: string,
+    linkTo: () => void,
     name: string
 }
 
@@ -25,7 +25,7 @@ interface UserProps {
 
 interface NavbarSubMenuProps {
     id: string,
-    linkTo: string,
+    linkTo?: () => void,
     name: string,
     srcIcon: string,
     altText: string,
@@ -33,6 +33,6 @@ interface NavbarSubMenuProps {
 }
 
 interface NavBarSubMenuDropdownProps {
-    linkTo: string,
+    linkTo?: () => void,
     name: string
 }
