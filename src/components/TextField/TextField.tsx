@@ -8,7 +8,8 @@ export const TextField: FC<TextFieldProps> = ({
         readonly,
         placeholder,
         value,
-        onChange
+        onChange,
+        id
     }) => {
 
     let textFieldSize, readOnlyCss;
@@ -31,6 +32,7 @@ export const TextField: FC<TextFieldProps> = ({
             className={`${textFieldSize} ${readOnlyCss} mr-2 border border-gray-300 rounded-md text-sm px-1.5 py-1.5 bg-gray-100 dark:bg-white `}
             value={value}
             onChange={onChange}
+            id={id}
         />
     )
 }

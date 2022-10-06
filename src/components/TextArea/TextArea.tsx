@@ -4,9 +4,12 @@ import '../../tw-esystyle.css';
 import {TextAreaProps as ComponentInterface} from "./TextArea.types";
 
 export const TextArea: FC<ComponentInterface> = ({
-    children,
     height,
-    isReadOnly
+    isReadOnly,
+    placeholder,
+    onChange,
+    value,
+    id
 }) => {
     let heightCSS = "h-36";
     let readOnlyCSS = "";
@@ -25,12 +28,13 @@ export const TextArea: FC<ComponentInterface> = ({
     }
     return (
         <textarea
-            placeholder={"hallo"}
-            className={`${heightCSS} ${readOnlyCSS} p-4 w-full bg-gray-100 dark:bg-white`}
+            placeholder={placeholder}
+            className={`${heightCSS} ${readOnlyCSS} p-4 w-full mr-2 border border-gray-300 rounded-md text-sm bg-gray-100 dark:bg-white`}
             readOnly={isReadOnly}
-        >
-            {children}
-        </textarea>
+            onChange={onChange}
+            value={value}
+            id={id}
+        />
     )
 }
 

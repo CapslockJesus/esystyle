@@ -39,11 +39,6 @@ export const Modal: FC<ComponentInterface> = ({children, hidden, size}) => {
             <div className={"fixed z-10 inset-0 overflow-y-auto"}>
                 <div className={"flex items-end items-center justify-center min-h-full p-4 text-center sm:p-0"}>
                     <div className={`${paddingCSS}  relative bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 ${sizeCSS} mr-5 ml-5 `}>
-                        <div className={`header pt-4 pb-4`}>
-                                <div className={"text-right"}>
-                                    <button onClick={closeFunction} className={"rounded-full border-radius-full bg-gray-100 px-2 hover:bg-gray-300"} >x</button>
-                                </div>
-                        </div>
                         {children}
                     </div>
                 </div>

@@ -1,3 +1,5 @@
+import React, {DetailedHTMLProps, InputHTMLAttributes} from "react";
+
 export interface TextFieldProps {
     /**
     ** Set the textfield type
@@ -16,5 +18,6 @@ export interface TextFieldProps {
      */
     placeholder?: string,
     value?: string
-    onChange?: () => void
+    onChange?: (event: DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>) => void,
+    id?: string
 }

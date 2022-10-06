@@ -43,8 +43,8 @@ Modal.args = {
             </p>
         </ModalBody>,
         <ModalFooter float={'right'}>
-            <Button onClick={closeFunction} disabled={false} isIconVisible={true} variant={"cancel"}/>
-            <Button onClick={closeFunction} disabled={true} isIconVisible={true} variant={"submit"}/>
+            <Button onClick={closeFunction} disabled={false} isIconVisible={true} variant={"cancel"} onlyIcon={false}/>
+            <Button onClick={closeFunction} disabled={true} isIconVisible={true} variant={"submit"} onlyIcon={false} />
         </ModalFooter>
     ]
 }

@@ -19,14 +19,12 @@ const Template: ComponentStory<typeof Component> = (args) => <Component {...args
 
 export const Textarea = Template.bind({});
 Textarea.args = {
-    children: '',
     height: 'default',
     isReadOnly: false
 }
 
 export const TextareaReadOnly = Template.bind({});
 TextareaReadOnly.args = {
-    children: '',
     height: 'default',
     isReadOnly: true
 }

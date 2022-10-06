@@ -8,7 +8,7 @@ export const ModalHeader: FC<ComponentInterface> = (
 ) => {
 
     return (
-        <div className={`pl-3 pr-3 header border-b border-yellow-300`}>
+        <div className={`pl-3 pr-3 mt-4 header border-b border-yellow-300`}>
             <div>
                 <span className={"font-extrabold text-xl"}>{headline}</span>
             </div>

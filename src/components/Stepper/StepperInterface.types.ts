@@ -13,7 +13,7 @@ export interface StepperInterface {
 interface Steps {
     showLineNextStep: boolean
     tailwindIcon: JSX.Element
-    linkTo: string
+    linkTo: () => void
     stepName: string
     isFinishdStep: boolean
 }

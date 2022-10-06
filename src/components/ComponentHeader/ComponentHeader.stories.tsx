@@ -27,7 +27,7 @@ export const WithActionBar = Template.bind({});
 WithActionBar.args = {
     componentName: "Header with ActionBar",
     children: [
-        <Button variant={"export"} disabled={true} onClick={()=>{}} isIconVisible={false} />,
-        <Button variant={"create"} disabled={false} onClick={()=>{}} isIconVisible={false} />
+        <Button variant={"export"} disabled={true} onClick={()=>{}} isIconVisible={false} onlyIcon={false} />,
+        <Button variant={"create"} disabled={false} onClick={()=>{}} isIconVisible={false} onlyIcon={false} />
     ]
 }

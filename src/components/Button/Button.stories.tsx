@@ -13,20 +13,23 @@ const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 export const Primary = Template.bind({});
 Primary.args = {
     variant: 'submit',
-    disabled: false
+    disabled: false,
+    value: "Speichern"
 }
 
 export const OnClick = Template.bind({});
 OnClick.args = {
     variant: 'submit',
     disabled: false,
-    onClick: () => {alert("Clicked!")}
+    onClick: () => {alert("Clicked!")},
+    value: "Speichern"
 }
 
 export const Disabled = Template.bind({});
 Disabled.args = {
     variant: 'delete',
-    disabled: true
+    disabled: true,
+    value: "Löschen"
 }
 
 export const WithIcon = Template.bind({});
@@ -34,5 +37,6 @@ WithIcon.args = {
     variant: 'cancel',
     disabled: false,
     isIconVisible: true,
+    value: "Abbrechen"
 }
 

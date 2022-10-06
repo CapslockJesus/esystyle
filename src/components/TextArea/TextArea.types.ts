@@ -1,5 +1,10 @@
+import {DetailedHTMLProps, InputHTMLAttributes} from "react";
+
 export interface TextAreaProps {
     height: 'default' | 'medium' | 'max-content';
-    children?: string;
-    isReadOnly: boolean
+    isReadOnly: boolean,
+    onChange?: (event: DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>) => void
+    placeholder?: string
+    value?: string
+    id?: string
 }
